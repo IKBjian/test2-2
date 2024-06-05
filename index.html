@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>安徽云丰数据分析平台</title>
+    <link rel="stylesheet" href="./index.css" />
+    <style>
+        header {
+            position: relative;
+            height: 1.25rem;
+            background: none;
+        }
+        header h1 {
+            font-size: xx-large;
+        }
+        .header-img {
+        vertical-align: middle;
+        height: 1.25rem; 
+        
+    }
+    </style>
+</head>
+<body style="font-size: 12px;" marginheight="0">
+<header>
+    
+    <h1>
+        <img src="./yunfeng.png" alt="安徽云丰" class="header-img">
+        安徽云丰 数据综合分析平台</h1>
+    <div class="showTime">
+        2023年3月9日10时58分26秒
+    </div>
+    <script>
+        var t = null;
+        t = setTimeout(time, 1000); //開始运行
+        function time() {
+            clearTimeout(t); //清除定时器
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours(); //获取时
+            var m = dt.getMinutes(); //获取分
+            var s = dt.getSeconds(); //获取秒
+            document.querySelector(".showTime").innerHTML =
+
+                y +
+                "年" +
+                mt +
+                "月" +
+                day +
+                "日" +
+                h +
+                "时" +
+                m +
+                "分" +
+                s +
+                "秒";
+            t = setTimeout(time, 1000); //设定定时器，循环运行
+        }
+    </script>
+</header>
+<section class="mainbox">
+    <div class="column">
+        <div class="panel line1_d">
+            <h2> 关注者男女比例 </h2>
+            <div class="chart" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;">
+                <div style="position: relative; width: 271px; height: 234px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                    <canvas data-zr-dom-id="zr_0" width="271" height="234" style="position: absolute; left: 0px; top: 0px; width: 271px; height: 234px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(58px, 136px, 0px); border-color: rgb(208, 160, 14); pointer-events: none; visibility: hidden; opacity: 0;">
+                    <div style="margin: 0px 0 0;line-height:1;">
+                        <div style="font-size:14px;color:#666;font-weight:400;line-height:1;">
+                            关注者男女比例
+                        </div>
+                        <div style="margin: 10px 0 0;line-height:1;">
+                            <div style="margin: 0px 0 0;line-height:1;">
+                                <span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#d0a00e;"></span>
+                                <span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">男</span>
+                                <span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">1,048</span>
+                                <div style="clear:both"></div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                        <div style="clear:both"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line1_b">
+            <h2> 用户互动分析 </h2>
+            <div class="chart" id="pycc" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;">
+                <div style="position: relative; width: 271px; height: 234px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                    <canvas data-zr-dom-id="zr_0" width="271" height="234" style="position: absolute; left: 0px; top: 0px; width: 271px; height: 234px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div class=""></div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line1_c">
+            <h2> 每周关注者增长分析 </h2>
+            <div class="chart" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;">
+                <div style="position: relative; width: 271px; height: 234px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                    <canvas data-zr-dom-id="zr_0" width="271" height="234" style="position: absolute; left: 0px; top: 0px; width: 271px; height: 234px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; will-change: transform; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1) 0s, visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1) 0s, transform 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: transparent; border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px &quot;Microsoft YaHei&quot;; padding: 10px; top: 0px; left: 0px; transform: translate3d(81px, 60px, 0px); border-color: rgb(255, 255, 255); pointer-events: none;">
+                    <div style="width: 79px;height: 50px;;color:#fff;position: relative;">
+                        <svg style="position: absolute;top: 50%;left: 50%;transform: translateX(-50%) translateY(-50%);" class="svg" xmlns="http://www.w3.org/2000/svg" width="100" height="71" viewbox="0 0 84 55">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #07172c;
+                                        fill-opacity: 0.8;
+                                        stroke: #a7d8ff;
+                                        stroke-linejoin: round;
+                                        stroke-opacity: 0.2;
+                                        stroke-width: 1px;
+                                        fill-rule: evenodd;
+                                    }
+
+                                </style>
+                            </defs>
+                            <path id="矩形_419" data-name="矩形 419" class="cls-1" d="M266,595h74v50H266V624.046L261,620l5-3.984V595Z" transform="translate(-258.5 -592.5)"></path>
+                        </svg>
+                        <div style="padding: 4px 8px 4px 14px;display: flex;justify-content: center;align-items: center;flex-direction: column;position: relative;z-index: 1;">
+                            <div style="margin-bottom: 4px;width:100%;display:flex;justify-content:space-between;align-items:center;">
+                                <span style="font-size:14px;color:#7ec7ff;">已入住</span>
+                                <span style="font-size:14px;color:#fff;">40</span>
+                            </div>
+                            <div style="width:100%;height:100%;display:flex;justify-content:space-between;align-items:center;">
+                                <span style="font-size:14px;color:#7ec7ff;">未入住</span>
+                                <span style="font-size:14px;color:#fff;">20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="panel line1_a">
+            <h2> 运营数据 </h2>
+            <div class="chart" style="height: 2.8rem; margin-top: 0.15rem; left: 0.55rem; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;">
+                <div style="position: relative; width: 271px; height: 219px; padding: 0px; margin: 0px; border-width: 0px;">
+                    <canvas data-zr-dom-id="zr_0" width="271" height="219" style="position: absolute; left: 0px; top: 0px; width: 271px; height: 219px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div class=""></div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div style="display:none" class="panel line2_a">
+            <h2> 运营数据</h2>
+            <div class="chart" style="height: 2.8rem; margin-top: 0.15rem; left: 0.55rem; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                <div style="position: relative; width: 0px; height: 218px; padding: 0px; margin: 0px; border-width: 0px;">
+                    <canvas data-zr-dom-id="zr_0" width="0" height="218" style="position: absolute; left: 0px; top: 0px; width: 0px; height: 218px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line2_b">
+            <h2> 营销效果数据 </h2>
+            <div class="chart" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                <div style="position: relative; width: 271px; height: 234px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                    <canvas data-zr-dom-id="zr_0" width="271" height="234" style="position: absolute; left: 0px; top: 0px; width: 271px; height: 234px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line1_f">
+            <h2> 微信生态中的影响力 </h2>
+            <div class="chart" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                <div style="position: relative; width: 271px; height: 234px; padding: 0px; margin: 0px; border-width: 0px;">
+                    <canvas data-zr-dom-id="zr_0" width="271" height="234" style="position: absolute; left: 0px; top: 0px; width: 271px; height: 234px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div style="display:none" class="panel line2_c">
+            <h2> </h2>
+            <div class="chart" style="user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;">
+                <div style="position: relative; width: 0px; height: 234px; padding: 0px; margin: 0px; border-width: 0px;">
+                    <canvas data-zr-dom-id="zr_0" width="0" height="234" style="position: absolute; left: 0px; top: 0px; width: 0px; height: 234px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div class=""></div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="no">
+            <div class="no-bd">
+                <ul>
+                    <li>当日实时公众号发文总数量</li>
+                </ul>
+            </div>
+            <div class="no-hd">
+                <ul>
+                    <li>4</li>
+                    <li>9</li>
+                    <li>8</li>
+                    <li>2</li>
+                    <li>2</li>
+                </ul>
+            </div>
+        </div>
+        <div class="map">
+            <div class="chart"></div>
+            <div class="map1"></div>
+            <div class="map2"></div>
+            <div class="map3"></div>
+            <a href="https://ahyfwl.chci.cn/" class="up">返回公司首页</a>
+        </div>
+    </div>
+    <div class="column">
+        <div class="panel line3_e" style="height: 3rem;">
+            <h2> 全平台用户活跃时段 </h2>
+            <div class="chart" style="height: 2.2rem; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;">
+                <div style="position: relative; width: 574px; height: 172px; padding: 0px; margin: 0px; border-width: 0px;">
+                    <canvas data-zr-dom-id="zr_0" width="574" height="172" style="position: absolute; left: 0px; top: 0px; width: 574px; height: 172px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div class=""></div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line3_f" style="height: 3rem;">
+            <h2> 全平台内容数据 </h2>
+            <div class="chart" style="height: 2.2rem; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); position: relative;">
+                <div style="position: relative; width: 574px; height: 172px; padding: 0px; margin: 0px; border-width: 0px;">
+                    <canvas data-zr-dom-id="zr_0" width="574" height="172" style="position: absolute; left: 0px; top: 0px; width: 574px; height: 172px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                </div>
+                <div class=""></div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line3_b" style="height: 5.575rem;">
+            <h2>全平台热门文章</h2>
+            <div class="tablebox">
+                <div class="tbl-header">
+                    <table cellspacing="0" cellpadding="0" border="0">
+                        <thead>
+                        <tr>
+                            <th scope="col" >文章标题</th>
+                            <th scope="col">公众号</th>
+                            <th scope="col">点击量</th>
+                            <th scope="col">点赞数</th>
+                            <th scope="col">转发数</th>
+                        </tr>
+                        </thead>
+                        <tbody style="opacity:0;">
+                        <tr data-url="https://mp.weixin.qq.com/s/uZ5vo5qlEQxao2iICIA-tA">
+                            <td width="50%">1万亿超长期特别国债发行,新的财富浪潮在哪</td>
+                            <td>安徽云丰</td>
+                            <td>258</td>
+                            <td>98</td>
+                            <td>35</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/WhVXD1hwv9vhxRQePVR2Tg">
+                            <td>中国三农建设委员会携手安徽云丰考察选址长临河..</td>
+                            <td>安徽云丰</td>
+                            <td>290</td>
+                            <td>45</td>
+                            <td>23</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/wb4n_B2Ey_McpeJl5IvxkA">
+                            <td>汇聚磅礴之力，鸿蒙安徽区域建设首期恳谈会圆满成功</td>
+                            <td>安徽云丰</td>
+                            <td>332</td>
+                            <td>35</td>
+                            <td>36</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/5mMP8lfghVRd2LrDctkRMA">
+                            <td>中国三农建设委员会与鸿蒙安徽云丰签署战略合作协议...</td>
+                            <td>安徽云丰</td>
+                            <td>246</td>
+                            <td>31</td>
+                            <td>27</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/zn-yYNdrkYIM-ylESNoF_Q">
+                            <td>鸿蒙国家公共服务平台携手百万政府补贴...</td>
+                            <td>安徽云丰</td>
+                            <td>261</td>
+                            <td>48</td>
+                            <td>30</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/YsA5CfDOWd5m-jLdi-2X9Q">
+                            <td>央视报道数字利好，合肥跑出加速度...</td>
+                            <td>安徽云丰</td>
+                            <td>283</td>
+                            <td>49</td>
+                            <td>33</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/VMQKgzXA4XvjkF8ZuB1c4Q">
+                            <td>材追本溯源，中国鸿蒙/安徽云丰邀你掘金数字蓝海</td>
+                            <td>安徽云丰</td>
+                            <td>270</td>
+                            <td>11</td>
+                            <td>28</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/l-hOtihgJ6gx4JYb9aYzlQ">
+                            <td>一文看懂鸿蒙如何为企业数字化转型服务？</td>
+                            <td>安徽云丰</td>
+                            <td>264</td>
+                            <td>55</td>
+                            <td>31</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/NWTU61CcCYXz4VHZDNh5dg">
+                            <td>瑶海区经信局领导率队莅临安徽云丰检阅数字化发展成果</td>
+                            <td>安徽云丰</td>
+                            <td>308</td>
+                            <td>51</td>
+                            <td>35</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/68rkZwuwzHoqO1cc9G_63g">
+                            <td>如火如荼！开展中小企业数字化转型进入首轮试点阶段</td>
+                            <td>安徽云丰</td>
+                            <td>313</td>
+                            <td>32</td>
+                            <td>34</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/-lFlRooeWhIkaB3QfSyBxA">
+                            <td>蓄势待发，鸿蒙进军安徽滁州</td>
+                            <td>安徽云丰</td>
+                            <td>255</td>
+                            <td>43</td>
+                            <td>29</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/_VdmhCNOoNeqDExEOEYIiA">
+                            <td>安徽建材商会为鸿蒙落地安徽各县区免费提供协调体验场所...</td>
+                            <td>安徽云丰</td>
+                            <td>298</td>
+                            <td>25</td>
+                            <td>32</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/whPHmNRNoOnxYId4I9tsjQ">
+                            <td>中央最高奖补1.5亿，合肥经信局连发两文...</td>
+                            <td>安徽云丰</td>
+                            <td>251</td>
+                            <td>14</td>
+                            <td>26</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/csDvrHL45DKWpmxOW0C9EQ">
+                            <td>海纳百川立潮头，同心筑梦话鸿蒙</td>
+                            <td>安徽云丰</td>
+                            <td>283</td>
+                            <td>49</td>
+                            <td>33</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/L7BbGPf2_3zqf8YbHm1Vdw">
+                            <td>捷报再传，肥东供销社携手安徽云丰共建...</td>
+                            <td>安徽云丰</td>
+                            <td>298</td>
+                            <td>25</td>
+                            <td>32</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/mZptEYPpSGP6OH86qAmYeg">
+                            <td>安徽云丰签约安徽智能家电产业联盟...</td>
+                            <td>安徽云丰</td>
+                            <td>264</td>
+                            <td>55</td>
+                            <td>31</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tbl-body" style="top: -385px;">
+                    <table cellspacing="0" cellpadding="0" border="0">
+                        <thead>
+                            <tr>
+                                <th scope="col">1</th>
+                                <th scope="col">分公司股份寿山福海</th>
+                                <th scope="col">352</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr data-url="https://mp.weixin.qq.com/s/uZ5vo5qlEQxao2iICIA-tA">
+                            <td>1万亿超长期特别国债发行,新的财富浪潮在哪</td>
+                            <td>安徽云丰</td>
+                            <td>258</td>
+                            <td>98</td>
+                            <td>35</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/WhVXD1hwv9vhxRQePVR2Tg">
+                            <td>中国三农建设委员会携手安徽云丰考察选址长临河..</td>
+                            <td>安徽云丰</td>
+                            <td>290</td>
+                            <td>45</td>
+                            <td>23</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/wb4n_B2Ey_McpeJl5IvxkA">
+                            <td>汇聚磅礴之力，鸿蒙安徽区域建设首期恳谈会圆满成功</td>
+                            <td>安徽云丰</td>
+                            <td>332</td>
+                            <td>35</td>
+                            <td>36</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/5mMP8lfghVRd2LrDctkRMA">
+                            <td>中国三农建设委员会与鸿蒙安徽云丰签署战略合作协议...</td>
+                            <td>安徽云丰</td>
+                            <td>246</td>
+                            <td>31</td>
+                            <td>27</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/zn-yYNdrkYIM-ylESNoF_Q">
+                            <td>鸿蒙国家公共服务平台携手百万政府补贴...</td>
+                            <td>安徽云丰</td>
+                            <td>261</td>
+                            <td>48</td>
+                            <td>30</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/YsA5CfDOWd5m-jLdi-2X9Q">
+                            <td>央视报道数字利好，合肥跑出加速度...</td>
+                            <td>安徽云丰</td>
+                            <td>283</td>
+                            <td>49</td>
+                            <td>33</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/VMQKgzXA4XvjkF8ZuB1c4Q">
+                            <td>材追本溯源，中国鸿蒙/安徽云丰邀你掘金数字蓝海</td>
+                            <td>安徽云丰</td>
+                            <td>270</td>
+                            <td>11</td>
+                            <td>28</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/l-hOtihgJ6gx4JYb9aYzlQ">
+                            <td>一文看懂鸿蒙如何为企业数字化转型服务？</td>
+                            <td>安徽云丰</td>
+                            <td>264</td>
+                            <td>55</td>
+                            <td>31</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/l-hOtihgJ6gx4JYb9aYzlQ">
+                            <td>瑶海区经信局领导率队莅临安徽云丰检阅数字化发展成果</td>
+                            <td>安徽云丰</td>
+                            <td>308</td>
+                            <td>51</td>
+                            <td>35</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/68rkZwuwzHoqO1cc9G_63g">
+                            <td>如火如荼！开展中小企业数字化转型进入首轮试点阶段</td>
+                            <td>安徽云丰</td>
+                            <td>313</td>
+                            <td>32</td>
+                            <td>34</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/-lFlRooeWhIkaB3QfSyBxA">
+                            <td>蓄势待发，鸿蒙进军安徽滁州</td>
+                            <td>安徽云丰</td>
+                            <td>255</td>
+                            <td>43</td>
+                            <td>29</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/_VdmhCNOoNeqDExEOEYIiA">
+                            <td>安徽建材商会为鸿蒙落地安徽各县区免费提供协调体验场所...</td>
+                            <td>安徽云丰</td>
+                            <td>298</td>
+                            <td>25</td>
+                            <td>32</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/whPHmNRNoOnxYId4I9tsjQ">
+                            <td>中央最高奖补1.5亿，合肥经信局连发两文...</td>
+                            <td>安徽云丰</td>
+                            <td>251</td>
+                            <td>14</td>
+                            <td>26</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/csDvrHL45DKWpmxOW0C9EQ">
+                            <td>海纳百川立潮头，同心筑梦话鸿蒙</td>
+                            <td>安徽云丰</td>
+                            <td>283</td>
+                            <td>49</td>
+                            <td>33</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/L7BbGPf2_3zqf8YbHm1Vdw">
+                            <td>捷报再传，肥东供销社携手安徽云丰共建...</td>
+                            <td>交通运输</td>
+                            <td>298</td>
+                            <td>25</td>
+                            <td>32</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/mZptEYPpSGP6OH86qAmYeg">
+                            <td>安徽云丰签约安徽智能家电产业联盟...</td>
+                            <td>安徽云丰</td>
+                            <td>264</td>
+                            <td>55</td>
+                            <td>31</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/uZ5vo5qlEQxao2iICIA-tA">
+                            <td>1万亿超长期特别国债发行,新的财富浪潮在哪</td>
+                            <td>安徽云丰</td>
+                            <td>258</td>
+                            <td>98</td>
+                            <td>35</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/WhVXD1hwv9vhxRQePVR2Tg">
+                            <td>中国三农建设委员会携手安徽云丰考察选址长临河..</td>
+                            <td>安徽云丰</td>
+                            <td>290</td>
+                            <td>45</td>
+                            <td>23</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/wb4n_B2Ey_McpeJl5IvxkA">
+                            <td>汇聚磅礴之力，鸿蒙安徽区域建设首期恳谈会圆满成功</td>
+                            <td>城乡规划</td>
+                            <td>332</td>
+                            <td>35</td>
+                            <td>36</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/5mMP8lfghVRd2LrDctkRMA">
+                            <td>中国三农建设委员会与鸿蒙安徽云丰签署战略合作协议...</td>
+                            <td>安徽云丰</td>
+                            <td>246</td>
+                            <td>31</td>
+                            <td>27</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/zn-yYNdrkYIM-ylESNoF_Q">
+                            <td>鸿蒙国家公共服务平台携手百万政府补贴...</td>
+                            <td>安徽云丰</td>
+                            <td>261</td>
+                            <td>48</td>
+                            <td>30</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/YsA5CfDOWd5m-jLdi-2X9Q">
+                            <td>央视报道数字利好，合肥跑出加速度...</td>
+                            <td>安徽云丰</td>
+                            <td>283</td>
+                            <td>49</td>
+                            <td>33</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/VMQKgzXA4XvjkF8ZuB1c4Q">
+                            <td>材追本溯源，中国鸿蒙/安徽云丰邀你掘金数字蓝海</td>
+                            <td>安徽云丰</td>
+                            <td>270</td>
+                            <td>11</td>
+                            <td>28</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/l-hOtihgJ6gx4JYb9aYzlQ">
+                            <td>一文看懂鸿蒙如何为企业数字化转型服务？</td>
+                            <td>安徽云丰</td>
+                            <td>264</td>
+                            <td>55</td>
+                            <td>31</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/NWTU61CcCYXz4VHZDNh5dg">
+                            <td>瑶海区经信局领导率队莅临安徽云丰检阅数字化发展成果</td>
+                            <td>安徽云丰</td>
+                            <td>308</td>
+                            <td>51</td>
+                            <td>35</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/68rkZwuwzHoqO1cc9G_63g">
+                            <td>如火如荼！开展中小企业数字化转型进入首轮试点阶段</td>
+                            <td>安徽云丰</td>
+                            <td>313</td>
+                            <td>32</td>
+                            <td>34</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/-lFlRooeWhIkaB3QfSyBxA">
+                            <td>蓄势待发，鸿蒙进军安徽滁州</td>
+                            <td>安徽云丰</td>
+                            <td>255</td>
+                            <td>43</td>
+                            <td>29</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/_VdmhCNOoNeqDExEOEYIiA">
+                            <td>安徽建材商会为鸿蒙落地安徽各县区免费提供协调体验场所...</td>
+                            <td>安徽云丰</td>
+                            <td>298</td>
+                            <td>25</td>
+                            <td>32</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/whPHmNRNoOnxYId4I9tsjQ">
+                            <td>中央最高奖补1.5亿，合肥经信局连发两文...</td>
+                            <td>安徽云丰</td>
+                            <td>251</td>
+                            <td>14</td>
+                            <td>26</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/csDvrHL45DKWpmxOW0C9EQ">
+                            <td>海纳百川立潮头，同心筑梦话鸿蒙</td>
+                            <td>安徽云丰</td>
+                            <td>283</td>
+                            <td>49</td>
+                            <td>33</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/L7BbGPf2_3zqf8YbHm1Vdw">
+                            <td>捷报再传，肥东供销社携手安徽云丰共建...</td>
+                            <td>安徽云丰</td>
+                            <td>298</td>
+                            <td>25</td>
+                            <td>32</td>
+                        </tr>
+                        <tr data-url="https://mp.weixin.qq.com/s/mZptEYPpSGP6OH86qAmYeg">
+                            <td>安徽云丰签约安徽智能家电产业联盟...</td>
+                            <td>安徽云丰</td>
+                            <td>264</td>
+                            <td>55</td>
+                            <td>31</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+</section>
+<script src="./jquery.js"></script>
+<script src="./flexible.js"></script>
+<script src="./echarts.min.js"></script>
+<script src="./index.js"></script>
+<script src="./select.js"></script>
+<script>
+    var MyMarhq = '';
+    clearInterval(MyMarhq);
+    $('.tbl-body tbody').empty();
+    $('.tbl-header tbody').empty();
+    var str = '';
+    var Items = [{
+        "Ranking": "1万亿超长期特别国债发行,新的财富浪潮在哪",
+        "City": "安徽云丰",
+        "SaleIncome": "258",
+        "SaleRough": "98",
+        "SalePlan": "35",
+        "Url": "https://mp.weixin.qq.com/s/uZ5vo5qlEQxao2iICIA-tA"
+
+    }, {
+        "Ranking": "中国三农建设委员会携手安徽云丰考察选址长临河..",
+        "City": "安徽云丰",
+        "SaleIncome": "290",
+        "SaleRough": "45",
+        "SalePlan": "23",
+        "Url": "https://mp.weixin.qq.com/s/WhVXD1hwv9vhxRQePVR2Tg"
+
+    }, {
+        "Ranking": "汇聚磅礴之力，鸿蒙安徽区域建设首期恳谈会圆满成功",
+        "City": "安徽云丰",
+        "SaleIncome": "332",
+        "SaleRough": "35",
+        "SalePlan": "36",
+        "Url": "https://mp.weixin.qq.com/s/wb4n_B2Ey_McpeJl5IvxkA"
+    }, {
+        "Ranking": "中国三农建设委员会与鸿蒙安徽云丰签署战略合作协议...",
+        "City": "安徽云丰",
+        "SaleIncome": "246",
+        "SaleRough": "31",
+        "SalePlan": "27",
+        "Url": "https://mp.weixin.qq.com/s/5mMP8lfghVRd2LrDctkRMA"
+    }, {
+        "Ranking": "鸿蒙国家公共服务平台携手百万政府补贴...",
+        "City": "安徽云丰",
+        "SaleIncome": "261",
+        "SaleRough": "48",
+        "SalePlan": "30",
+        "Url": "https://mp.weixin.qq.com/s/zn-yYNdrkYIM-ylESNoF_Q"
+    }, {
+        "Ranking": "央视报道数字利好，合肥跑出加速度...",
+        "City": "安徽云丰",
+        "SaleIncome": "283",
+        "SaleRough": "49",
+        "SalePlan": "33",
+        "Url": "https://mp.weixin.qq.com/s/YsA5CfDOWd5m-jLdi-2X9Q"
+    }, {
+        "Ranking": "材追本溯源，中国鸿蒙/安徽云丰邀你掘金数字蓝海",
+        "City": "安徽云丰",
+        "SaleIncome": "270",
+        "SaleRough": "11",
+        "SalePlan": "28",
+        "Url": "https://mp.weixin.qq.com/s/VMQKgzXA4XvjkF8ZuB1c4Q"
+    }, {
+        "Ranking": "一文看懂鸿蒙如何为企业数字化转型服务？",
+        "City": "安徽云丰",
+        "SaleIncome": "264",
+        "SaleRough": "55",
+        "SalePlan": "31",
+        "Url": "https://mp.weixin.qq.com/s/l-hOtihgJ6gx4JYb9aYzlQ"
+    }, {
+        "Ranking": "瑶海区经信局领导率队莅临安徽云丰检阅数字化发展成果",
+        "City": "安徽云丰",
+        "SaleIncome": "308",
+        "SaleRough": "51",
+        "SalePlan": "35",
+        "Url": "https://mp.weixin.qq.com/s/NWTU61CcCYXz4VHZDNh5dg"
+    }, {
+        "Ranking": "如火如荼！开展中小企业数字化转型进入首轮试点阶段",
+        "City": "安徽云丰",
+        "SaleIncome": "313",
+        "SaleRough": "32",
+        "SalePlan": "34",
+        "Url": "https://mp.weixin.qq.com/s/68rkZwuwzHoqO1cc9G_63g"
+    }, {
+        "Ranking": "蓄势待发，鸿蒙进军安徽滁州",
+        "City": "安徽云丰",
+        "SaleIncome": "255",
+        "SaleRough": "43",
+        "SalePlan": "29",
+        "Url": "https://mp.weixin.qq.com/s/-lFlRooeWhIkaB3QfSyBxA"
+    }, {
+        "Ranking": "安徽建材商会为鸿蒙落地安徽各县区免费提供协调体验场所...",
+        "City": "安徽云丰",
+        "SaleIncome": "298",
+        "SaleRough": "25",
+        "SalePlan": "32",
+        "Url": "https://mp.weixin.qq.com/s/_VdmhCNOoNeqDExEOEYIiA"
+    }, {
+        "Ranking": "中央最高奖补1.5亿，合肥经信局连发两文...",
+        "City": "安徽云丰",
+        "SaleIncome": "251",
+        "SaleRough": "14",
+        "SalePlan": "26",
+        "Url": "https://mp.weixin.qq.com/s/whPHmNRNoOnxYId4I9tsjQ"
+    }, {
+        "Ranking": "海纳百川立潮头，同心筑梦话鸿蒙",
+        "City": "安徽云丰",
+        "SaleIncome": "283",
+        "SaleRough": "49",
+        "SalePlan": "33",
+        "Url": "https://mp.weixin.qq.com/s/csDvrHL45DKWpmxOW0C9EQ"
+    }, {
+        "Ranking": "捷报再传，肥东供销社携手安徽云丰共建...",
+        "City": "安徽云丰",
+        "SaleIncome": "298",
+        "SaleRough": "25",
+        "SalePlan": "32",
+        "Url": "https://mp.weixin.qq.com/s/L7BbGPf2_3zqf8YbHm1Vdw"
+    }, {
+        "Ranking": "安徽云丰签约安徽智能家电产业联盟...",
+        "City": "安徽云丰",
+        "SaleIncome": "264",
+        "SaleRough": "55",
+        "SalePlan": "31",
+        "Url": "https://mp.weixin.qq.com/s/mZptEYPpSGP6OH86qAmYeg"
+    }]
+    $.each(Items, function(i, item) {
+        str = '<tr data-url="' + item.Url + '">' +
+            '<td >' + item.Ranking + '</td>' +
+            '<td>' + item.City + '</td>' +
+            '<td>' + (+item.SaleIncome) + '</td>' +
+            '<td>' + (+item.SaleRough) + '</td>' +
+            '<td>' + (+item.SalePlan) + '</td>' +
+            '</tr>'
+
+        $('.tbl-body tbody').append(str);
+        $('.tbl-header tbody').append(str);
+    });
+
+    if (Items.length > 10) {
+        $('.tbl-body tbody').html($('.tbl-body tbody').html() + $('.tbl-body tbody').html());
+        $('.tbl-body').css('top', '0');
+        var tblTop = 0;
+        var speedhq = 50; // 数值越大越慢
+        var outerHeight = $('.tbl-body tbody').find("tr").outerHeight();
+        function Marqueehq() {
+            if (tblTop <= -outerHeight * Items.length) {
+                tblTop = 0;
+            } else {
+                tblTop -= 1;
+            }
+            $('.tbl-body').css('top', tblTop + 'px');
+        }
+
+        MyMarhq = setInterval(Marqueehq, speedhq);
+
+        // 鼠标移上去取消事件
+        $(".tbl-header tbody").hover(function() {
+            clearInterval(MyMarhq);
+        }, function() {
+            clearInterval(MyMarhq);
+            MyMarhq = setInterval(Marqueehq, speedhq);
+        })
+
+        // 为每个tr元素添加点击事件
+        $(document).on('click', 'tr[data-url]', function() {
+        var url = $(this).data('url');
+        window.open(url, '_blank');
+    });
+    }
+
+</script>
+</body>
+</html>
